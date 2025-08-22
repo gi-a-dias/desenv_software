@@ -9,12 +9,6 @@ Este repositório foi criado para centralizar as entregas de tarefas e projetos 
 
 Aqui você encontrará todos os arquivos, códigos-fonte, documentos e materiais relacionados às atividades propostas durante o curso. O objetivo é organizar e facilitar o acompanhamento do progresso ao longo do semestre.
 
-## Estrutura do Repositório
-
-- `tarefas/` — Entregas de exercícios e tarefas semanais.
-- `projeto/` — Projeto final da disciplina.
-- `docs/` — Documentação, relatórios e outros materiais de apoio.
-
 ## Como utilizar
 
 1. Clone o repositório:
