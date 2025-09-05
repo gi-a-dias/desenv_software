@@ -3,19 +3,17 @@
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Tkinter](https://img.shields.io/badge/Tkinter-2C5E7E?style=for-the-badge&logo=tkinter&logoColor=white)
 
-Este é um projeto de software desktop desenvolvido como um exercício prático para aplicar conceitos fundamentais de Programação Orientada a Objetos (POO) com Python. A aplicação permite o cadastro de diferentes tipos de funcionários e calcula seus salários com base em regras de negócio específicas para cada cargo.
+Exercício prático para aplicar conceitos fundamentais de Programação Orientada a Objetos (POO) com Python. A aplicação permite o cadastro de diferentes tipos de funcionários, calcula seus salários com base em regras específicas e exibe os cadastros em tempo real.
 
 ## ✨ Principais Funcionalidades
 
 * **Cadastro de Funcionários:** Interface gráfica para registrar novos funcionários.
 * **Diferentes Tipos de Cargos:** O sistema distingue entre funcionários **Administrativos**, **Professores** e **Técnicos**.
-* **Cálculo de Salário Polimórfico:** Cada classe de funcionário possui seu próprio método para calcular o salário final, adicionando bônus específicos:
-    * **Administrativo:** Salário base + Bônus fixo.
-    * **Professor:** Salário base + Bônus percentual.
-    * **Técnico:** Salário base + Bônus fixo por periculosidade.
-* **Interface Gráfica Moderna:** Desenvolvida com `tkinter` e estilizada com a biblioteca `ttkbootstrap` para uma aparência amigável.
-*  **Atualização - 04/09 :** - Adição de Menu dinâmico à lacuna de "cargos" com acionamento de campos específicos de cada classe de funcionário
-                             - Inserção de campos para melhor diferenciação de funcionários (CPF) e
+* **Cálculo de Salário Polimórfico:** Cada classe de funcionário possui seu próprio método para calcular o salário final, adicionando bônus específicos.
+* **Interface Gráfica Dinâmica:** O formulário de entrada se adapta em tempo real ao cargo selecionado, mostrando apenas os campos necessários.
+* **Visualização de Dados:** Os funcionários cadastrados são exibidos em uma tabela na tela principal.
+* **Validação de Dados:** O sistema impede o cadastro de funcionários com o mesmo CPF.
+* **Interface Moderna:** Desenvolvida com `tkinter` e estilizada com a biblioteca `ttkbootstrap` para uma aparência amigável.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -57,17 +55,23 @@ Siga os passos abaixo para rodar a aplicação em seu ambiente local.
     ```
     *(Dependendo do seu sistema, você pode precisar usar `python3` em vez de `python`)*
 
-## 🎓 Objetivos de Aprendizado do Projeto
+## Atualizações
 
-Este projeto serviu como uma ferramenta prática para estudar e aplicar os seguintes conceitos:
+* **04/09/2025:**
+    * Implementada a funcionalidade de **interface dinâmica**, onde o formulário se adapta ao cargo selecionado.
+    * Adicionada a **validação para impedir o cadastro de CPFs duplicados**.
+    * Criada uma **tabela de visualização** para exibir os funcionários cadastrados em tempo real.
+    * Organização da estrutura do código no `Main.py` para melhor organização e legibilidade.
+
+## 🎓 Objetivos de Aprendizado da Tarefa
 
 * **Programação Orientada a Objetos (POO):**
     * **Herança:** Criação de uma classe base `Funcionario` e classes filhas especializadas.
     * **Polimorfismo:** Implementação de um mesmo método (`calcular_salario`) com comportamentos diferentes em cada classe filha.
-    * **Encapsulamento:** Organização da lógica de negócios dentro das classes apropriadas.
-* **Desenvolvimento de Interface Gráfica (GUI):** Uso do Tkinter para criar janelas, labels, campos de entrada, botões e menus.
+    * **Encapsulamento:** Separação da lógica de gerenciamento de dados (`GerenciadorFuncionarios`) da camada de apresentação (GUI).
+* **Desenvolvimento de Interface Gráfica (GUI):** Uso do Tkinter para criar janelas, widgets dinâmicos e visualização de dados em tabelas (`Treeview`).
 * **Estruturação de Projetos em Python:** Separação do código em diferentes módulos e criação de um pacote para a lógica de negócio.
-* **Versionamento de Código:** Utilização de Git e GitHub para controle de versão e armazenamento do projeto, seguindo o fluxo de commit e push.
+* **Versionamento de Código:** Utilização de Git e GitHub para controle de versão e armazenamento do projeto.
 
 ---
 
