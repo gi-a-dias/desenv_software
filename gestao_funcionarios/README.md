@@ -14,6 +14,8 @@ Este é um projeto de software desktop desenvolvido como um exercício prático 
     * **Professor:** Salário base + Bônus percentual.
     * **Técnico:** Salário base + Bônus fixo por periculosidade.
 * **Interface Gráfica Moderna:** Desenvolvida com `tkinter` e estilizada com a biblioteca `ttkbootstrap` para uma aparência amigável.
+*  **Atualização - 04/09 :** - Adição de Menu dinâmico à lacuna de "cargos" com acionamento de campos específicos de cada classe de funcionário
+                             - Inserção de campos para melhor diferenciação de funcionários (CPF) e
 
 ## 🚀 Tecnologias Utilizadas
 
