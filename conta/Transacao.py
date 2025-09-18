@@ -1,8 +1,6 @@
 #importar ABC, classe para interface
 from abc import ABC, abstractmethod
-
-from arrow.util import validate_ordinal
-
+from Conta import Conta
 
 class Transacao(ABC):
     @abstractmethod #carimbo para tornar o metodo obrigatorio nas filhas
@@ -11,25 +9,24 @@ class Transacao(ABC):
         pass
 
 #Como o projeto é pequeno podemos deixar as classes filhas aqui
+#Classe Filha: Deposito
 class Deposito(Transacao):
     #atributo privado e float
-    def __init__(self, conta):
+    def __init__(self, valor):
         self._valor = float(valor)
 
-    #metodo obrigatorio
-    def registrar(self, conta):
-        sucesso_transacao = conta.depositar(self._valor) #acessa o metodo da classe conta
-        if sucesso_transacao:
+    def registrar(self, conta: Conta):
+        if conta.depositar(self._valor):
             conta.historico.adicionar_transacao(self)
-        print(f'Depósito de R$ {self._valor:.2f} realizado com sucesso.')
+            print("Transação de depósito registrada no histórico.")
 
+#Classe filha: Saque
 class Saque(Transacao):
-    def __init__(self, conta):
+    def __init__(self, valor):
         self._valor = float(valor)
 
     #metodo obrigaotrio
-    def registrar(self, conta):
-        sucesso_transacoa = conta.sacar(self._valor)
-        if sucesso_transacao:
+    def registrar(self, conta: Conta):
+        if conta.sacar(self._valor):
             conta.historico.adicionar_transacao(self)
-        print(f'Saque de R${self._valor:.2f} realizado com sucesso.')
+            print("Transação de saque registrada no histórico.")
