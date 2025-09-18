@@ -3,14 +3,18 @@ from Historico import Historico
 
 class Conta():
     #Atributos (todos privados)
-    def __init__(self, numero:int, cliente: Cliente):
+    def __init__(self, numero:int, cliente):
         self._saldo = 0.0 #float
         self._numero = numero
         self._agencia = "0001" #string
         self._Cliente = cliente
         self._Historico = Historico()
 
-    #metodos
+    #getters
+    @property #getters
+    def numero(self):
+        return self._numero
+
     @property
     def saldo(self):
         return self._saldo
@@ -22,6 +26,7 @@ class Conta():
     @property
     def cliente(self):
         return self._Cliente
+
     def sacar(self, valor: float):
         if valor>0 and self._saldo >= valor:
             self._saldo -= valor
